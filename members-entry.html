@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bhimshakti - Members Database</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/ashokchakra-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/ashokchakra.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main_style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <img src="assets/img/ashokchakra-64.jpg" alt="Logo" />
+                <span class="text-dark h4">भीम</span> <span class="text-primary h4">शक्ती </span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">मुखपृष्ठ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="initiatives.html">उपक्रम</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">आमच्याबद्दल</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">संपर्क</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="policy.html">धोरण</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="" onclick="signOutUser()">लॉग आउट</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Member -->
+    <div class="container">
+        
+        <div class="member-form-title-container">
+            <div class="center-content">
+                <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">नवीन सदस्य नोंदणी फॉर्म</h1>
+                <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
+                    नाव, गाव, तालुका, जिल्हा, मोबाईल क्रमांक, ई-मेल या फॉर्मद्वारे सबमिट करा.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Start Registration Form -->
+    <div class="members-form">
+        <members-form action="">
+            <div class="members-row">
+                <div class="members-col"></div>
+                <div class="members-col">
+                <button type="button" onclick="clearAndGeneratePassword()" class="other-btn">New Member</button>
+                </div>
+                <div class="members-col"></div>
+                
+                <div class="members-col">
+                    <label class="members-label" for="districtSelect">District:</label>
+                    <select id="districtSelect" name="district" class="form-select members-form-control">
+                        <option value="" selected disabled>Select District</option>
+                    </select>
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="talukaSelect">Taluka:</label>
+                    <select id="talukaSelect" name="taluka" class="form-select members-form-control">
+                        <option value="" selected disabled>Select Taluka</option>
+                    </select>
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="villageSelect"> Village:</label>
+                    <select id="villageSelect" name="village" class="form-select members-form-control">
+                        <option value="" selected disabled>Select Village</option>
+                    </select>
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="fistName">First Name:</label>  
+                        <input class="members-form-control" type="text" id="firstName">   
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="midName">Middle Name:</label>
+                    <input class="members-form-control" type="text" id="midName">
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="lastName">Last name:</label>
+                    <input class="members-form-control" type="text" id="lastName">
+                </div>
+                <div class="members-col">
+                    <label  class="members-label"for="email"> Gender:</label>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="gender" id="male"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary light-300" for="male">Male</label>
+
+                        <input type="radio" class="btn-check" name="gender" id="female" value="Female"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary light-300" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="members-col">
+                    <label  class="members-label"for="email"> Post:</label>
+                    <select id="postSelect" name="post" class="form-select members-form-control">
+                        <option value="" selected disabled>Select Post</option>
+                        <option value="Chairman">Chairman</option>
+                        <option value="Assistant Chairman">Assistant Chairman</option>
+                        <option value="Secretary">Secretary</option>
+                        <option value="Assistant Secretary">Assistant Secretary</option>
+                        <option value="Treasurer">Treasurer</option>
+                        <option value="Member1">Member1</option>
+                        <option value="Member2">Member2</option>
+                    </select>
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="email"> Email:</label>
+                    <input class="members-form-control" type="email" id="email">
+                    
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="mobile">Mobile No:</label>  
+                    <input class="members-form-control" type="text" id="mobile" pattern="[0-9]{10}"> 
+                    <div id="mobileError" style="color: red; display: none;">Please enter a valid 10-digit mobile number.</div>  
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="address">Address:</label>
+                    <input class="members-form-control" type="text" id="address">
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="pincode">pincode:</label>
+                    <input class="members-form-control" type="text" id="pincode" pattern="[0-6]{6}"">
+                    <div id="pincodeError" style="color: red; display: none;">Please enter a valid 6-digit pincode.</div>
+                </div>
+                <div class="members-col">
+                    <label  class="members-label" for="pass"> Password:</label>
+                    <input class="members-form-control" type="text" id="pass">
+                </div>
+                <div class="members-col">
+                    
+                    <label class="members-label" for="birthdateMonth">Birthdate (Month):</label>
+                        <select class="members-form-control" id="birthdateMonth" required;>
+                            <option value="" disabled selected>Select Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>  
+                </div>
+                <div class="members-col">
+                        <label class="members-label" for="birthdateDay">Birthdate (Day):</label>
+                        <input class="members-form-control" type="number" id="birthdateDay" min="1"
+                            max="31" required style="height: 40px";> 
+                </div>
+                <div class="members-col">
+                    
+                    <label class="members-label" for="anniversaryMonth">Anniversary (Month):</label>
+                    <select class="members-form-control" id="anniversaryMonth" required;>
+                        <option value="" disabled selected>Select Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="anniversaryDay">Anniversary (Day):</label>
+                    <input class="members-form-control" type="number" id="anniversaryDay" min="1"
+                        max="31" required style="height: 40px";> 
+                </div>
+                <div class="members-col">
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="photo">Profile Picture:</label>
+                    <input type="file" id="photo" name="photo"></br><br>
+                    <button id="upload" class="other-btn" onclick="uploadImage()">Upload Image</button>
+                </div>
+                <div class="members-col">
+                    <label class="members-label" for="imageUrl">Image Url:</label>
+                    <input class="members-form-control" type="text"  id="imageUrlLabel">
+                </div>
+                <div class="members-col">
+                    <img id="image" src="" alt="Uploaded Image" />
+                </div>
+                <div class="members-col">
+                </div>
+            
+            <button type="button" id="createDatabase" class="members-btn">Submit</button>
+        </div>
+    </div>
+    
+    <!-- Bhimshakti -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="assets/js/members-entry.js"></script>
+
+</body>
+</html>

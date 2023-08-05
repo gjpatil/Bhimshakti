@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bhimshakti - Members View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/ashokchakra-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/ashokchakra.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main_style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <img src="assets/img/ashokchakra-64.jpg" alt="Logo" />
+                <span class="text-dark h4">Bhim</span> <span class="text-primary h4">Shakti</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="initiatives.html">Initiatives</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="policy.html">Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="" onclick="signOutUser()">Logout</a>
+                        </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+
+    <h2><center>Login Form</center></h2><br>
+    <div class="flex-container">
+        <div class="flex-child magenta">
+            <form onsubmit="userlogin(event)" id="userloginForm" >
+            <div class="imgcontainer">
+                <img src="" alt="Avatar" class="avatar" id="profilePicture">
+                <h3>Login</h3>
+                </div>
+          
+                <div class="container">
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" id="username" class="input" readonly>
+                
+                    <label for="userpsw"><b>Password</b></label>
+                    <input type="password" id="userpsw" class="input" placeholder="Enter Password"  required>
+                    
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="openMembersView()" hidden>Members Profiles</button>
+                    <span class="psw"><a href="#" onclick="openPopup()">Forgot password?</a></span>
+
+            </div>
+            </form>
+        </div>
+        <!-- The popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Retrieve Old Password</h2>
+      <label for="favoriteQuestion">What is your mother's name?</label>
+      <input type="text" id="favoriteQuestion" required>
+  
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="tel" id="mobileNumber" required>
+  
+      <button type="button" onclick="retrievePassword()">Retrieve Password</button>
+      <label for="oldPassword" id="oldPasswordLabel"></label>
+    </div>
+  </div>
+    
+    <div class="flex-child green">
+        <br>
+            <button type="button" id="btn-members">Select Your Name</button><br><br>
+            <label for="selectName">
+        <label for="selectName">
+            <h5>Select a Name:</h5>
+        </label>
+        <select id="selectName" name="name" class="custom-select">
+            <option value="" selected disabled>
+                <h5>Select Name</h5>
+            </option>
+        </select>
+    </div>
+    <div class="flex-child green">
+        <form onsubmit="changePassword(event)" id="userpasswordForm" >
+          <div class="container">
+            
+            <center><h3>Change Password</h3></center>
+
+              <label for="username2"><b>Username</b></label>
+              <input type="text" id="username2"readonly>
+          
+              <label for="oldpsw"><b>Old Password</b></label>
+              <input type="text" placeholder="Enter old password" id="oldpsw" required>
+
+              <label for="newpsw1"><b>New Password</b></label>
+              <input type="password" placeholder="Enter newpassword"id="newpsw1" required>
+
+              <label for="newpsw2"><b>New Password</b></label>
+              <input type="text" placeholder="Enter again new password" id="newpsw2" required>
+              
+              <label for="question"><b>Mother's name (for password recovery)</b></label>
+              <input type="text" placeholder="Mother's name" id="question" required>  
+
+              <button type="submit">Change Password</button>
+
+            </div>
+        </form>
+           </div>
+    </div>
+
+  <br><br>
+
+  <div class="flex-container">
+    <div class="flex-child magenta">
+    </div>
+    
+    <div class="flex-child green">
+        <form onsubmit="login()" id="loginForm" >
+            <div class="imgcontainer">
+                <span id="userEmail"></span>
+              <h3>Admin Login</h3>
+            </div>
+          
+            <div class="container">
+              <label for="adminemail"><b>Email</b></label>
+              <input type="text" id="adminemail" class="input" placeholder="Enter Email"  required>
+          
+              <label for="adminpsw"><b>Password</b></label>
+              <input type="password" id="adminpsw" class="input" placeholder="Enter Password"  required>
+                  
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+
+            </div>
+          
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn" id="membersProfileBtn2" onclick="openMembersView()" hidden>Members Profiles</button>
+                <button type="button" class="cancelbtn" id="membersEntryBtn" onclick="openMembersEntry()" hidden>Members Data Entry</button>
+              <span class="psw" onclick="forgotPass()"> <a href="#">Forgot password?</a></span>
+              <div id="error" class="error-message"></div>
+           </div>
+          </form>
+    </div>
+    <div class="flex-child green">
+    </div>
+  </div>
+
+       <!-- Start Footer -->
+   <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="assets/js/firebaseAuth.js"></script>
+</body>
+
+</html>

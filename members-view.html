@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bhimshakti - Members View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/ashokchakra-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/ashokchakra.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main_style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <img src="assets/img/ashokchakra-64.jpg" alt="Logo" />
+                <span class="text-dark h4">भीम</span> <span class="text-primary h4">शक्ती </span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">मुखपृष्ठ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="initiatives.html">उपक्रम</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">आमच्याबद्दल</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">संपर्क</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="policy.html">धोरण</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="" onclick="signOutUser()">लॉग आउट</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Banner Hero -->
+    <div class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">संपर्क</h1>
+                    <h3 class="h4 regular-400">भीमशक्ती संगठनाच्या सदस्य डेटाबेस प्रवेश पृष्ठावर आपले स्वागत आहे! </h3>
+                    <p class="light-300">
+                        येथे तुम्ही सदस्यांचे संपर्क तपशील, वाढदिवस, वर्धापन दिन, प्रोफाइल चित्र पाहू शकता
+                    </p>
+                    <a class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300" href="members-entry.html" role="button">डेटा एंट्री पृष्ठावर जा</a> 
+                </div>
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="./assets/img/banner-img-01.svg" alt="banner-picture">
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- End Banner Hero -->
+        
+        <!-- Members Data  -->
+        <div class="container p-3 my-3 border">
+                        
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">
+                    <h3>Party Members Data</h3><br>
+                    <button type="button" id="btn-members" class="btn btn-success rounded-pill btn-block shadow px-4 py-2">First Click Here</button><br><br>
+                    <label for="selectName">
+                        <h5>Select a Name:</h5>
+                    </label>
+                    <select id="selectName" name="name" class="custom-select">
+                        <option value="" selected disabled>
+                            <h5>Select Name</h5>
+                        </option>
+                    </select><br><br>
+                
+               <div>
+                
+                </div>
+                <!-- End Members Data  -->
+                
+                <div class="p-2 flex-fill border">
+                    <h3>Find Birthdays & Anniversaries</h3><br>
+                    <!-- Birtday Select  -->
+                    <button type="button" id="btn-birthday" class="btn btn-info rounded-pill btn-lg shadow px-4 py-2">Birthdays</button><br><br>
+                    <label class="birthAnniv" for="birthdateSelect">Select Birth Date:</label>
+                    <select id="birthdateSelect" name="birthdate" class="birthAnniv" required>
+                        <option value="" selected disabled>Select Date</option>
+                    </select><br>
+                      <label class="birthAnniv" for="birthnameSelect">Select Name:</label>
+                    <select id="birthnameSelect" name="birthName" class="birthAnniv">
+                        <option value="" selected disabled>Select Name</option>
+                    </select><br>
+                    <!-- Anniversary Select  -->
+                    <button type="button" id="btn-anniversary" class="btn btn-info rounded-pill btn-lg shadow px-4 py-2">Anniversaries</button><br><br>
+                    <label for="annivdateSelect" class="birthAnniv" >Select Anniversary Date:</label>
+                    <select id="annivdateSelect" name="annivdate" class="birthAnniv" required>
+                        <option value="" selected disabled>Select Date</option>
+                    </select><br>
+                   <label for="annivnameSelect" class="birthAnniv">Select Name:</label>
+                    <select id="annivnameSelect" name="annivName" class="birthAnniv">
+                        <option value="" selected disabled>Select Name</option>
+                    </select>
+                </div>
+                
+                <!-- End Birtday Anniversary Select  -->
+            </div>
+        <div class="p-2 flex-fill border"> 
+            <!-- Members Data View  -->
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Opeartion:</div>
+                <div class="p-2 flex-fill border" id="operation"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Name:</div>
+                <div class="p-2 flex-fill border" id="selectedName"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Check Details:</div>
+                <button type="button" id="btn-profile" class="btn btn-warning rounded-pill btn-block shadow px-4 py-2 flex-fill border">Read more</button>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Post:</div>
+                <div class="p-2 flex-fill border" id="post"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Gender:</div>
+                <div class="p-2 flex-fill border" id="gender"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Mobile:</div>
+                <div class="p-2 flex-fill border" id="mobile"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Email:</div>
+                <div class="p-2 flex-fill border" id="email"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">District:</div>
+                <div class="p-2 flex-fill border" id="district"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Taluka:</div>
+                <div class="p-2 flex-fill border" name="taluka" id="taluka"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Village</div>
+                <div class="p-2 flex-fill border" id="village"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Address:</div>
+                <div class="p-2 flex-fill border" id="address"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Pin Code:</div>
+                <div class="p-2 flex-fill border" id="pincode"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Birthday:</div>
+                <div class="p-2 flex-fill border" id="birthdate"></div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Anniversary day:</div>
+                <div class="p-2 flex-fill border" id="anniversaryDate"></div>            
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 flex-fill border">Image Url:</div>
+                <p class="p-2 flex-fill border" id="imgUrlLabel"></p>
+            </div>
+            <div>
+                <button id="showImage" onclick="showProfileImage()">Show Profile Image</button>
+                <img id="profileimage" src="profileimage" alt="Profile Image" />
+            </div>
+        </div>
+    </div>
+        <!-- End Members Data View  -->
+        
+        <!-- Start Footer -->
+            <div class="w-100 bg-primary p-4">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-start text-center text-light light-300">
+                                © Copyright 2023 Bhimshakti. All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-end text-center text-light light-300">
+                                Designed by <a rel="sponsored" class="text-decoration-none text-light"
+                                    href="https://www.bhipshakti.org/" target="_blank"><strong>Girish Patil</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+        <script src="assets/js/members-view.js"></script>
+</body>
+
+</html>
