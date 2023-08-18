@@ -69,14 +69,17 @@
                 <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
                     नाव, गाव, तालुका, जिल्हा, मोबाईल क्रमांक, ई-मेल या फॉर्मद्वारे सबमिट करा.
                 </p>
+                <a href="members-view.html">Go to Members Profiles</a>
             </div>
-        </div>
+        </div> 
     </div>
     <!-- Start Registration Form -->
     <div class="members-form">
         <members-form action="">
             <div class="members-row">
-                <div class="members-col"></div>
+                <div class="members-col">
+                 
+                </div>
                 <div class="members-col">
                 <button type="button" onclick="clearAndGeneratePassword()" class="other-btn">New Member</button>
                 </div>
@@ -224,17 +227,26 @@
                     <img id="image" src="" alt="Uploaded Image" />
                 </div>
                 <div class="members-col">
-                </div>
-            
-            <button type="button" id="createDatabase" class="members-btn">Submit</button>
+                </div> 
+
+              <button type="button" id="createDatabase" class="members-btn">Submit</button><br>
+              <br>
+              <a href="#" id="download">Download Data</a><br><br>
         </div>
     </div>
+        <div class="members-col">
+        <input type="file" id="fileInput" accept=".csv">
+        <button id="upload" class="upload-btn" onclick="handleUploadClick()">Upload Data</button>
+        </div>
+
+      
     
     <!-- Bhimshakti -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
     <script src="assets/js/members-entry.js"></script>
 

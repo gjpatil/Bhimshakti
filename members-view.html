@@ -71,7 +71,7 @@
                     <p class="light-300">
                         येथे तुम्ही सदस्यांचे संपर्क तपशील, वाढदिवस, वर्धापन दिन, प्रोफाइल चित्र पाहू शकता
                     </p>
-                    <a class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300" href="members-entry.html" role="button">डेटा एंट्री पृष्ठावर जा</a> 
+                   
                 </div>
                 <div class="contact-img col-lg-5 align-items-end col-md-4">
                     <img src="./assets/img/banner-img-01.svg" alt="banner-picture">
@@ -92,7 +92,7 @@
                 <label for="selectName">
                         <h5>Select a Name:</h5>
                     </label>
-                <select id="selectName" name="name" class="custom-select">
+                <select id="selectName" name="name" class="custom-select js-searchBox">
                         <option value="" selected disabled>
                             <h5>Select Name</h5>
                         </option>
@@ -103,21 +103,21 @@
                <!-- Birtday Select  -->   
                 <button type="button" id="btn-birthday" class="btn btn-info rounded-pill btn-lg shadow px-4 py-2">Birthdays</button><br><br>
                     <label class="birthAnniv" for="birthdateSelect">Select Birth Date:</label>
-                    <select id="birthdateSelect" name="birthdate" class="birthAnniv" required>
+                    <select id="birthdateSelect" name="birthdate" class="birthAnniv js-searchBox" required>
                         <option value="" selected disabled>Select Date</option>
                     </select><br>
                       <label class="birthAnniv" for="birthnameSelect">Select Name:</label>
-                    <select id="birthnameSelect" name="birthName" class="birthAnniv">
+                    <select id="birthnameSelect" name="birthName" class="birthAnniv js-searchBox">
                         <option value="" selected disabled>Select Name</option>
                     </select><br>
                  <!-- Anniversary Select  -->
                <button type="button" id="btn-anniversary" class="btn btn-info rounded-pill btn-lg shadow px-4 py-2">Anniversaries</button><br><br>
                     <label for="annivdateSelect" class="birthAnniv" >Select Anniversary Date:</label>
-                    <select id="annivdateSelect" name="annivdate" class="birthAnniv" required>
+                    <select id="annivdateSelect" name="annivdate" class="birthAnniv js-searchBox" required>
                         <option value="" selected disabled>Select Date</option>
                     </select><br>
                    <label for="annivnameSelect" class="birthAnniv">Select Name:</label>
-                    <select id="annivnameSelect" name="annivName" class="birthAnniv">
+                    <select id="annivnameSelect" name="annivName js-searchBox" class="birthAnniv">
                         <option value="" selected disabled>Select Name</option>
                     </select>
             </div> 
@@ -208,6 +208,7 @@
         <!-- End Members Data View  -->
     
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="dist/js/jquery-searchbox.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
